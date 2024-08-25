@@ -20,7 +20,7 @@ export function DialogDemo() {
         <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            Make changes to your profile here. Click save when youre done.
           </DialogDescription>
         </DialogHeader>
        
@@ -31,3 +31,5 @@ export function DialogDemo() {
     </Dialog>
   )
 }
+export { Dialog }
+
