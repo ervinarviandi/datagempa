@@ -10,7 +10,6 @@ export default async function DataGempaBaru() {
         <div className='lg:max-w-6xl mx-auto px-5'>
             <h2 className='text-4xl text-center font-bold'>Data Gempa Bumi Terbaru</h2>
             <p className=''>Dibawah ini adalah data gempa bumi terbaru </p>
-
             <div>
                 {
         posts && posts.Infogempa.gempa.map((items: any) => (

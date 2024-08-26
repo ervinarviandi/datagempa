@@ -15,6 +15,8 @@ import Image from 'next/image';
 import { Button } from '../ui/button';
 import GridPattern from '../magicui/grid-pattern';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import DotPattern from '../magicui/dot-pattern';
 
 export default async function DataFetch() {
 
@@ -25,7 +27,7 @@ export default async function DataFetch() {
 
 
   return (
-    <div className='w-full'>
+    <div className='w-full relative'>
       <div className=' lg:max-w-8xl mx-auto px-5'>
         <h2 className='lg:text-5xl text-3xl font-bold text-center mt-10'>Data Gempa Bumi Terbaru</h2>
         <p className='text-center dark:text-gray-300 text-gray-400 mt-4'>Data diambil 10 menit sekali (waktu ambil data adalah waktu server.)</p>
@@ -55,12 +57,13 @@ export default async function DataFetch() {
       <TableHead>Ambil Data</TableHead>
       <TableHead>Tanggal</TableHead>
       <TableHead className="w-[100px]">Jam</TableHead>
-      <TableHead className="w-[100px]">Wilayah</TableHead>
       <TableHead>koordinat</TableHead>
       <TableHead>Lintang</TableHead>
+      <TableHead className="w-[100px]">Wilayah</TableHead>
+      <TableHead>Magnitudo</TableHead>
       <TableHead>Kedalaman</TableHead>
       <TableHead>Potensi</TableHead>
-      {/* <TableHead>Aksi</TableHead> */}
+      <TableHead>Aksi</TableHead>
     </TableRow>
   </TableHeader>
   <TableBody>
@@ -71,14 +74,18 @@ export default async function DataFetch() {
           <TableCell>{items.DateTime}</TableCell>
           <TableCell>{items.Tanggal}</TableCell>
           <TableCell>{items.Jam}</TableCell>
-          <TableCell>{items.Wilayah}</TableCell>
           <TableCell>{items.Coordinates}</TableCell>
           <TableCell>{items.Lintang}</TableCell>
+          <TableCell>{items.Wilayah}</TableCell>
+          <TableCell>{items.Magnitude}</TableCell>  
           <TableCell>{items.Kedalaman}</TableCell>
           <TableCell>{items.Potensi}</TableCell>
-          {/* <TableCell>
+          <TableCell>
             <Button>AKSI</Button>
-          </TableCell> */}
+          </TableCell>
+           {/* <Link as={`/p/${posts.id}`} href={`/post?id=${posts.id}`}>
+            {posts.name}
+          </Link> */}
         </TableRow>
       ))
     }
@@ -86,24 +93,9 @@ export default async function DataFetch() {
 </Table>
       </div>
       </div>
-      <GridPattern
-        squares={[
-          [4, 4],
-          [5, 1],
-          [8, 2],
-          [5, 3],
-          [5, 5],
-          [10, 10],
-          [12, 15],
-          [15, 10],
-          [10, 15],
-          [15, 10],
-          [10, 15],
-          [15, 10],
-        ]}
+      <DotPattern
         className={cn(
-          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
         )}
       />
     </div>

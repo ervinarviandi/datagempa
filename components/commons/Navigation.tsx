@@ -26,6 +26,7 @@ const Navigation = () => {
             <div className='items-center gap-x-5 flex'>
                 <Link href='/' className='hover:text-sky-300'>Home</Link>
                 <Link href='/gempadirasakan' className='hover:text-sky-300'>Gempa Dirasakan</Link>
+                {/* <Link href='/gempaterkini' className='hover:text-sky-300'>Gempa Terbaru</Link> */}
             </div>
             <div className='flex gap-x-3 items-center'>
             <Dialog>
