@@ -2,7 +2,7 @@
 import Navigation from '@/components/commons/Navigation';
 import { useState, useEffect, use } from 'react';
 
-export default  function page() {
+export default  function Page() {
 
 
   interface Users {
